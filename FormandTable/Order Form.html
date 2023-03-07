@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <table> 
+            <tbody align="left">
+                <tr>
+                    <th colspan="4">
+                        <h2>Order Form</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4">What would you like to buy?</th>
+                 </tr>
+                 <tr>
+                    <td colspan="4">
+                        <select style="width: 150px;">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4">How many would you like to order?</th>
+                 </tr>
+                 <tr>
+                    <th>
+                        <input type="radio" name="order">1-$10<br>
+                        <input type="radio" name="order">2-$20<br>
+                        <input type="radio" name="order">3-$25
+                    </th>
+                 </tr>
+                 <tr>
+                    <th>Name</th>
+                 </tr>
+                 <tr>
+                    <td>
+                        <input  colspan="2" type="text" placeholder="FirstName" required style="width: 100px;">
+                    </td>
+                    <td>
+                        <input  colspan="2" type="text" placeholder="LastName" required style="width: 100px;">
+                    </td>
+                 </tr>
+                 <tr>
+                    <th>Email</th>
+                 </tr>
+                 <tr>
+                    <td colspan="3">
+                        <input type="email" style="width: 250px">
+                    </td>
+                 </tr>
+                 <tr>
+                    <th colspan="4">Phone Number</th>
+                 </tr>
+                 <tr>
+                    <td>
+                        <input type="tel" style="width: 50px">
+                    </td>
+                    <td>
+                        <input type="tel" style="width: 50px">
+                    </td>
+                    <td>
+                        <input type="tel" style="width: 50px">
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>
+                        <input type="submit" value="submit">
+                    </td>
+                 </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
