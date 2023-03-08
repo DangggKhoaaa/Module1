@@ -1,7 +1,12 @@
-table{}
+table{
+    border-width: 3px;
+}
 caption, .blue{
     color: blue;
 }
 .cam{
     background-color: orange;
+}
+.yellow{
+    background-color: yellow;
 }
