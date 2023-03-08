@@ -1,4 +1,4 @@
-table{
+.table1{
     border-style: solid;
     border-width: 10px;
     border-color: aqua;
@@ -11,5 +11,12 @@ table{
     color:orangered;
 }
 .blue{
+    color:blue;
+}
+.table2{
+    background-color: khaki;
+}
+thead{
+    background-color:aquamarine;
     color:blue;
 }
