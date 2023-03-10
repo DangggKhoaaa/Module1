@@ -1,7 +1,14 @@
 thead{
     background-color: red;
     color: white;
+    height: 80px;
 }
 table{
     border-color: aliceblue;
+    border-collapse: collapse;
+    height: 200px;
+    width: 700px;
+}
+td{
+    border-color: black;
 }

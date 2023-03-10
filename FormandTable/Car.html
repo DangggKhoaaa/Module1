@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car</title>
+    <style>
+        table{width: 500px;
+            text-align: center;
+        }
+        #id1{height: 500px;
+            width: 500px;
+        }
+        #left, #right, #up, #down{
+            width: 125px;
+            height: 35px;
+            border-radius: 20px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr id="id1">
+            <td colspan="3">
+                <img src="Image/car.png" alt="" id="car">
+            </td>
+        </tr>
+        <tr>    
+            <td></td>
+            <td>
+                <button id="up" onclick="controlup()">UP</button>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <button id="left" onclick="controlleft()">LEFT</button>
+            </td> 
+            <td></td>  
+            <td>   
+                <button id="right" onclick="controlright()">RIGHT</button>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>      
+                <button id="down" onclick="controldown()">DOWN</button>
+            </td>   
+        </tr>     
+    </table>
+    <script>
+        function controlleft(){
+            if(document.getElementById('left').innerText == "LEFT"){
+            document.getElementById('car').src="Image/carleft.png"}
+        }
+        function controlright(){
+            if(document.getElementById('right').innerText == "RIGHT"){  
+            document.getElementById('car').src="Image/car.png"}
+                
+        }   
+        function controlup(){
+            if(document.getElementById('up').innerText == "UP"){  
+            document.getElementById('car').src="Image/carup.png"}
+                
+        }   
+        function controldown(){
+            if(document.getElementById('down').innerText == "DOWN"){  
+            document.getElementById('car').src="Image/cardown.png"}
+                
+        }   
+    </script>
+</body>
+</html>

@@ -8,7 +8,7 @@ caption{
     color: blue;
 }
 td{
-    font-size: 30px;
+    font-size: 25px;
 }
 th{
     height: 30px;
@@ -16,13 +16,13 @@ th{
     color: white;
 }
 sub{
-    font-size: 15px;
+    font-size: 10px;
     color: black;
 }
 #tb2{
     border-collapse: collapse;
-    border-style: groove;
     border-width: 3px;
+    border-color: rgb(163, 162, 162);
 }
 .red{
     background-color: red;
