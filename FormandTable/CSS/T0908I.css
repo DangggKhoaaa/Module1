@@ -7,7 +7,9 @@ caption, .blue{
 }
 .cam{
     background-color: orange;
+    height: 25px;
 }
 .yellow{
     background-color: yellow;
+    height: 25px;
 }
