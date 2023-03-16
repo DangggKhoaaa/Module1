@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill</title>
+</head>
+<body>
+    <h3>ỨNG DỤNG TÍNH TIỀN ĐIỆN</h3>
+    <div>
+        <input type="number" id="kWh" placeholder="Nhập số kWh"><br><br>
+        <button type="button" onclick="money()">Xem giá tiền</button><br><br>
+        <input type="text" id="result" placeholder="Giá tiền điện">
+    </div>
+    <script>
+    // IF...ELSE
+        // function money() {
+        //     let kWh = +document.getElementById('kWh').value;
+        //     let result = "";
+        //     if (kWh < 0) {
+        //         result = 'Mời nhập lại số kWh'
+        //     } else if (kWh > 0 && kWh <= 50 ) {
+        //         let total = kWh * 1678;
+        //         result = (total + 'VNĐ');
+        //     }
+        //     else if (kWh > 50 && kWh <= 100) {
+        //         let total =  (kWh - 50) * 1734 + 50 * 1678;
+        //         result = (total + 'VNĐ')
+        //     }
+        //     else if (kWh > 100 && kWh <= 200) {
+        //         let total = (kWh - 100) * 2014 + 50 * 1734 + 50 *1678;
+        //         result = (total + 'VNĐ')
+        //     }
+        //     else if (kWh > 200 && kWh <= 300) {
+        //         let total = (kWh - 200) * 2536 + 100 * 2014 + 50 * 1734 + 50 *1678;
+        //         result = (total + 'VNĐ')
+        //     }
+        //     else if (kWh > 300 && kWh <= 400) {
+        //         let total = (kWh - 300) * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 *1678;
+        //         result = (total + 'VNĐ')
+        //     }
+        //     else {
+        //         let total = (kWh - 400) * 2917 + 100 * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 *1678;
+        //         result = (total + 'VNĐ')
+        //     }
+            
+        //     document.getElementById('result').value = result
+        // }
+
+    // SWITCH...CASE
+        // function money() {
+        //     let kWh = +document.getElementById('kWh').value;
+        //     let result = "";
+        //     switch (true) {
+        //         case kWh < 0:
+        //             result = 'Số kWh không hợp lệ';
+        //             break;
+        //         case (kWh > 0 && kWh <= 50):
+        //             let total = kWh * 1678;
+        //             result = (total + 'VNĐ');
+        //             break;
+        //         case (kWh > 50 && kWh <= 100):
+        //             let total2 =  (kWh - 50) * 1734 + 50 * 1678;
+        //             result = (total2 + 'VNĐ');
+        //             break;
+        //         case (kWh >100 && kWh <= 200):
+        //             let total3 = (kWh - 100) * 2014 + 50 * 1734 + 50 *1678;
+        //             result = (total3 + 'VNĐ');
+        //             break;
+        //         case (kWh > 200 && kWh <= 300):
+        //             let total4 = (kWh - 200) * 2536 + 100 * 2014 + 50 * 1734 + 50 *1678;
+        //             result = (total4 + 'VNĐ');
+        //             break;
+        //         case (kWh > 300 && kWh <= 400):
+        //             let total5 = (kWh - 300) * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 *1678;
+        //             result = (total5 + 'VNĐ');
+        //             break;
+        //         case kWh > 400:
+        //             let total6 = (kWh - 400) * 2917 + 100 * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 *1678;
+        //             result = (total6 + 'VNĐ');
+        //             break;
+        //     }
+        //     document.getElementById('result').value = result
+        // }
+
+
+            function money() {
+                let kWh = +document.getElementById('kWh').value;
+                let result = `${kWh < 0 ? 'Số kWh không hợp lệ' : 
+                                (kWh > 0 && kWh <= 50) ? (kWh * 1678) + 'VNĐ' :
+                                (kWh > 50 && kWh <= 100) ? (kWh - 50) * 1734 + 50 * 1678 + 'VNĐ' :
+                                (kWh >100 && kWh <= 200) ? (kWh - 100) * 2014 + 50 * 1734 + 50 * 1678 + 'VNĐ' :
+                                (kWh > 200 && kWh <= 300) ? (kWh - 200) * 2536 + 100 * 2014 + 50 * 1734 + 50 * 1678 + 'VNĐ' :
+                                (kWh > 300 && kWh <= 400) ? (kWh - 300) * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 * 1678 + 'VNĐ' :
+                                                            (kWh - 400) * 2927 + 100 * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 * 1678 + 'VNĐ'}`;
+                document.getElementById('result').value = result                                            
+
+            }
+    </script>
+</body>
+</html>

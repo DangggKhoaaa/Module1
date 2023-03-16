@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month</title>
+</head>
+<body>
+    <caption><h3>TÍNH SỐ NGÀY TRONG THÁNG</h3></caption><br>
+    <input type="number" id="value" placeholder="Nhập tháng bạn muốn">
+    <button type="button" onclick="submit()">Tính số ngày</button><br><br>
+    <input type="text" id="result" placeholder="Số ngày trong tháng" size="35px" readonly>
+    <div> 
+    </div>
+    <script>
+        function submit(){
+        let month = +document.getElementById('value').value;
+        let result= '';
+            switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                result=('Tháng' + ' ' + month + ' ' + 'có 31 ngày');
+                break;
+            case 2:
+                result=('Tháng 2 có 28 hoặc 29 ngày');
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                result=('Tháng' + ' ' + month + ' ' + 'có 30 ngày');
+                break;
+            default:
+                result=('Không có tháng' + " " + month);
+        }
+        document.getElementById('result').value = result;
+        }
+        
+    </script>
+</body>
+</html>

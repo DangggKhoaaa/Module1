@@ -20,7 +20,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="docReady()">
     <table>
         <tr id="id1">
             <td colspan="3">
@@ -69,7 +69,23 @@
             if(document.getElementById('down').innerText == "DOWN"){  
             document.getElementById('car').src="Image/cardown.png"}
                 
-        }   
+        } 
+        
+        function controlright() {
+            var element = document.getElementById('right');
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+        }
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+            case 39:
+            controlright();
+            break;
+            }
+        }
+        function docReady() {
+            window.addEventListener('keydown', moveSelection);
+        }
     </script>
 </body>
 </html>
