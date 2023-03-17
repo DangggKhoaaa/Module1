@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIANGLE</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Cạnh đầu tiên:</td>
+                <td>
+                    <input type="number" id="edge1">
+                </td>
+            </tr>
+            <tr>
+                <td>Cạnh thứ hai:</td>
+                <td>
+                    <input type="number" id="edge2">
+                </td>
+            </tr>
+            <tr>
+                <td>Cạnh thứ ba:</td>
+                <td>
+                    <input type="number" id="edge3">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" id="result" readonly size="35px">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <button onclick="btn()">Check</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function btn(){
+            let a = +document.getElementById('edge1').value;
+            let b = +document.getElementById('edge2').value;
+            let c = +document.getElementById('edge3').value;
+            let result = '';
+            if (a>0 && b>0 && c>0) {
+                if (a+b>c) {
+                    if (b+c>a) {
+                        if (a+c>b) {
+                            result = '3 số nhập vào là 3 cạnh của tam giác'
+                        }
+                        else {
+                            result = '3 số nhập vào k phải 3 cạnh của tam giác'
+                        }
+                    }
+                    else {
+                        result = '3 số nhập vào k phải 3 cạnh của tam giác'
+                    }
+                }
+                else {
+                    result = '3 số nhập vào k phải 3 cạnh của tam giác'
+                }
+            }
+            else {
+                result = '3 số nhập vào k phải 3 cạnh của tam giác'
+            }
+            document.getElementById('result').value = result;
+        }
+    </script>
+</body>
+</html>
