@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGE</title>
+</head>
+<body>
+    <div>
+        <h3>ĐIỀU KIỆN VÀO LỚP 10</h3>
+        <input type="number" id="age" placeholder="Nhập số tuổi">
+        <button type="button" id="btn" onclick="btnText()">KIỂM TRA</button><br><br>
+        <input type="text" id="in_1" placeholder="Kết quả" readonly size="33px">
+    </div>
+    <script>
+        function btnText() {
+            let Age = document.getElementById('age').value;
+            let result = '';
+            if (Age < 16) {
+                result = 'Không đủ tuổi vào lớp 10';
+            }
+            else {
+                result = 'Đủ tuổi vào lớp 10'
+            }
+            document.getElementById('in_1').value = result;
+        }
+    </script>
+</body>
+</html>

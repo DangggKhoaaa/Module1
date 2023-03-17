@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text A%B == 0?</title>
+</head>
+<body>
+    <div>
+        <h4>KIỂM TRA "A" CHIA HẾT CHO "B" HAY KHÔNG?</h4>
+        <input type="number" id="A" placeholder="Input A"><br><br>
+        <input type="number" id="B" placeholder="Input B"><br><br>
+        <button type="button" id="btn" onclick="btnText()">Text</button><br><br>
+        <input type='text' id="id_p" placeholder="Result" readonly>
+    </div>
+    <script>
+        function btnText() {
+            let A = document.getElementById('A').value;
+            let B = document.getElementById('B').value;
+            let result = '';
+            if(A%B == 0){
+                result = 'A chia hết cho B';
+            }
+            else {
+                result = 'A không chia hết cho B';
+            }
+            document.getElementById('id_p').value = result
+        }
+    </script>
+
+</body>
+</html>

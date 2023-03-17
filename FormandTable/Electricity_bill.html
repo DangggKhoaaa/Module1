@@ -20,23 +20,23 @@
         //     let result = "";
         //     if (kWh < 0) {
         //         result = 'Mời nhập lại số kWh'
-        //     } else if (kWh > 0 && kWh <= 50 ) {
+        //     } else if (kWh <= 50 ) {
         //         let total = kWh * 1678;
         //         result = (total + 'VNĐ');
         //     }
-        //     else if (kWh > 50 && kWh <= 100) {
+        //     else if (kWh <= 100) {
         //         let total =  (kWh - 50) * 1734 + 50 * 1678;
         //         result = (total + 'VNĐ')
         //     }
-        //     else if (kWh > 100 && kWh <= 200) {
+        //     else if (kWh <= 200) {
         //         let total = (kWh - 100) * 2014 + 50 * 1734 + 50 *1678;
         //         result = (total + 'VNĐ')
         //     }
-        //     else if (kWh > 200 && kWh <= 300) {
+        //     else if (kWh <= 300) {
         //         let total = (kWh - 200) * 2536 + 100 * 2014 + 50 * 1734 + 50 *1678;
         //         result = (total + 'VNĐ')
         //     }
-        //     else if (kWh > 300 && kWh <= 400) {
+        //     else if (kWh <= 400) {
         //         let total = (kWh - 300) * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 *1678;
         //         result = (total + 'VNĐ')
         //     }
@@ -56,23 +56,23 @@
         //         case kWh < 0:
         //             result = 'Số kWh không hợp lệ';
         //             break;
-        //         case (kWh > 0 && kWh <= 50):
+        //         case (kWh <= 50):
         //             let total = kWh * 1678;
         //             result = (total + 'VNĐ');
         //             break;
-        //         case (kWh > 50 && kWh <= 100):
+        //         case (kWh <= 100):
         //             let total2 =  (kWh - 50) * 1734 + 50 * 1678;
         //             result = (total2 + 'VNĐ');
         //             break;
-        //         case (kWh >100 && kWh <= 200):
+        //         case (kWh <= 200):
         //             let total3 = (kWh - 100) * 2014 + 50 * 1734 + 50 *1678;
         //             result = (total3 + 'VNĐ');
         //             break;
-        //         case (kWh > 200 && kWh <= 300):
+        //         case (kWh <= 300):
         //             let total4 = (kWh - 200) * 2536 + 100 * 2014 + 50 * 1734 + 50 *1678;
         //             result = (total4 + 'VNĐ');
         //             break;
-        //         case (kWh > 300 && kWh <= 400):
+        //         case (kWh <= 400):
         //             let total5 = (kWh - 300) * 2834 + 100 * 2536 + 100 * 2014 + 50 * 1734 + 50 *1678;
         //             result = (total5 + 'VNĐ');
         //             break;
@@ -84,7 +84,7 @@
         //     document.getElementById('result').value = result
         // }
 
-
+    // 3 NGÔI   
             function money() {
                 let kWh = +document.getElementById('kWh').value;
                 let result = `${kWh < 0 ? 'Số kWh không hợp lệ' : 

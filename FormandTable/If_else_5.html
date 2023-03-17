@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank</title>
+</head>
+<body>
+    <table>
+        <h2>XẾP HẠNG HỌC LỰC</h2>
+        <tbody>
+            <tr>
+                <td>Điểm kiểm tra</td>
+                <td>
+                    <input type="number" id="id_1">
+                </td>
+            </tr>
+            <tr>
+                <td>Điểm giữa kỳ</td>
+                <td>
+                    <input type="number" id="id_2">
+                </td>
+            </tr>
+            <tr>
+                <td>Điểm cuối kỳ</td>
+                <td>
+                    <input type="number" id="id_3">
+                </td>
+            </tr>
+            <tr>
+                <td>Điểm trung bình</td>
+                <td>
+                    <input type="text" id="id_4" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="btn()">Xem điểm</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function btn() {
+            let a = +document.getElementById('id_1').value;
+            let b = +document.getElementById('id_2').value;
+            let c = +document.getElementById('id_3').value;
+            let dtb = (a + b * 2 + c * 3) / 6;
+            if (a<0 || a>10 || b<0 || b>10 || c<0 || c>10) {
+                alert('Bạn nhập sai rồi. Mời nhập lại')
+            }
+            else if (dtb >= 9) {
+                alert('Học lực xuất sắc')
+            }
+            else if (dtb < 9 && dtb >= 8) {
+                alert('Học lực giỏi')
+            }
+            else if (dtb < 8 && dtb >= 6.5) {
+                alert('Học lực khá')
+            }
+            else if (dtb < 6.5 && dtb >= 5) {
+                alert('Học lực trung bình')
+            }
+            else {
+                alert('Học lực yếu')
+            }
+            document.getElementById('id_4').value = dtb;
+            
+        }
+    </script>
+</body>
+</html>

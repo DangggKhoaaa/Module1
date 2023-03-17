@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THUẾ THU NHẬP CÁ NHÂN</title>
+    <style>
+        #id_2 {
+            color: red;
+        }
+        td {
+            font-size: 20px;
+            padding: 10px 5px;
+        }
+        input {
+            border-radius: 10px;
+            text-align: center;
+        }
+        button {
+            width: 100px;
+            border: 5px solid;
+            border-radius: 10px;
+        
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <h2>THUẾ THU NHẬP CÁ NHÂN</h2>
+        <tbody>
+            <tr>
+                <td>Thu nhập hàng tháng:</td>
+                <td>
+                    <input type="number" id="id_1" placeholder="Tính bằng Triệu VNĐ">
+                </td>
+            </tr>
+            <tr>
+                <td>Số thuế phải nộp:</td>
+                <td>
+                    <input type="text" id="id_2" placeholder="Tính bằng Triệu VNĐ" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="btn()">Result</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function btn() {
+            let income = +document.getElementById('id_1').value;
+            let result = '';
+            if (income<0) {
+                result = "Số tiền nhập không đúng";
+            }
+            else if (income<=5) {
+                result = income*5/100;
+            }
+            else if (income<=10) {
+                result = (income*10/100) - 0.25;
+            }
+            else if (income<=18) {
+                result = (income*15/100) - 0.75;
+            }
+            else if (income<=32) {
+                result = (income*20/100) - 1.65;
+            }
+            else if (income<=52) {
+                result = (income*25/100) - 3.25;
+            }
+            else if (income<=80) {
+                result = (income*30/100) - 5.85;
+            }
+            else {
+                result = (income*35/100) - 9.85;
+            }
+        document.getElementById('id_2').value = result;
+        }
+    </script>
+</body>
+</html>
