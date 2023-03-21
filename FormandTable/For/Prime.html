@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt('Enter a number: '));
+        let count = 0;
+        let N = 2;
+        for (;count < num;N++) {
+            if (num % N == 0) {
+               if (num == N) {
+                document.write(N)
+               }
+            }
+            else count++
+        }
+    </script>
+</body>
+</html>
