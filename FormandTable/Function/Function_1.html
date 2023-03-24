@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function generateArray(size, min, max) {
+            let numbers = new Array(size);
+            for (i = 0; i < numbers.length; i++) {
+                numbers[i] = Math.ceil(Math.random() * (max - min) + min)
+            }
+            // console.log(numbers);
+            return numbers;
+        }
+        // let array_1 = generateArray(10, 100, 500);
+        // let array_2 = generateArray(15, 1, 30);
+
+        // console.log(array_1);
+        // console.log(array_2.toString());
+        document.write(generateArray(20, 10, 100));
+    </script>
+</body>
+
+</html>
