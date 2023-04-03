@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: pacifico;
+}
+body{
+    max-width: 99%;
+    margin: 5px auto;
+    background-color: rgb(50, 250, 250, 0.5);
+    
+}
+
+
+h1{
+    font-size: 100px;
+    justify-content: center;
+    display:block;
+    text-decoration: underline;
+    margin: 20px auto;
+    color:white;
+    text-shadow: 0 0 25px blue, 0 0 50px darkblue;
+    /* letter-spacing: 15px; */
+}
+
+#img_plus{
+    
+    position: fixed;
+    display: block;
+    right: -3%;
+    bottom: -2%;
+}
+
+div {
+    float: left;
+    /* display: flex; */
+    margin: 20px 25px;
+    text-align: center;
+    /* border: 1px solid black; */
+    background-color: transparent;
+    
+}
+
+#nameDrinks{
+    font-size: 30px;
+    display: inline;
+}
+
+#nameDrinks:hover {
+    text-shadow: 0 0 5px blue;;
+    text-decoration: underline;
+    
+}
+
+#parent{
+    position: relative;
+    place-items: center;
+    margin: auto;
+}
+
+#title{
+    text-align: center;
+    /* border: 1px solid black; */
+    width: 97%;
+
+}
+
+#parent_1, #parent_2{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu{
+    background-color: rgb(250, 250, 250, 0.7);
+    border-radius: 7%;
+    position: relative;
+
+}
+.menu:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .5s;
+    box-shadow: 0 0 1px 1px black;
+}
+.menu:hover>.btnEdit{
+    display: block;
+}
+.menu:hover>.btnDel{
+    display: block;
+}
+#image{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+     
+}
+
+#image:hover{
+    /* filter: brightness(90%) blur(1px); */
+    opacity: 0.7;/* Làm mờ */
+    /* filter: grayscale(100%); */ /*biến thành màu xám*/
+    /* transform: scaleX(-1); */ /* Đảo ngược ảnh*/
+    transition: .5;
+}
+
+#priceDrinks{
+    font-size: 20px;
+    font-weight:bolder;
+    display: inline;
+}
+
+#priceDrinks:hover{
+    opacity: 0.5;
+    color: red;
+    
+}
+
+.btnEdit{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(0, 200, 0);
+    border-radius: 10px;
+    display: none;
+    width: 70px;
+    color: white;
+}
+
+#hashtag{
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    background-color: yellow;
+    width: 70px;
+    border-radius: 10px;
+}
+
+.btnDel{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline;
+    background-color: red;
+    display: none;
+    border-radius: 10px;
+    width: 70px;
+    color: white;
+}
+
+
+#table_1, #table_2{
+    margin: auto;
+    border: 2px solid black;
+    background-color: pink;
+    padding:20px;
+    font-size: 20px;
+    display: none;
+    border-radius: 7%;
+    /* position: fixed; */
+}
+
+.btnOk{
+    background-color: rgb(0, 200, 0);
+}
+
+.btnCancel{
+    background-color: red;
+}
+
+.btnOk, .btnCancel{
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
