@@ -8,15 +8,15 @@
 </head>
 <body>
     <script>
-        let num = +prompt('Enter your number: ');
-        let total = 0
-        let result = 1
-        for (let i = 1; i <= num; i++) {
-            result = result * i;
-            total = total + result ;
-                
+        let n = prompt('Nhập số : ');
+        let i;
+        for (i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                if (i % 2 != 0) {
+                    document.write('Ước lẻ: ' + i + '<br>')
+                }
+            }
         }
-        alert(total);
     </script>
 </body>
 </html>

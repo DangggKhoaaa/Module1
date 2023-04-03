@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = +prompt('');
+        let i = 1;
+        while (i <= num) {
+            if (num % i == 0) {
+                if (num == i) {
+                    document.write(num + ' là số nguyên tố')
+                }
+                else {
+                    document.write(num + ' không phải là số nguyên tố')
+                }
+            } 
+            i++
+        }
+    </script>
+</body>
+
+</html>

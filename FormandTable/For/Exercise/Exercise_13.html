@@ -9,12 +9,9 @@
 <body>
     <script>
         let num = +prompt('Enter your number: ');
-        let total = 0
-        let result = 1
+        let total = 0;
         for (let i = 1; i <= num; i++) {
-            result = result * i;
-            total = total + result ;
-                
+            total = total + Math.pow(num, (2*i))
         }
         alert(total);
     </script>
